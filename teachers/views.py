@@ -20,3 +20,4 @@ class StudentViewSet(ModelViewSet):
 
         return [permission() for permission in permissions]
 
+
