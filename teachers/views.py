@@ -1,13 +1,13 @@
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from rest_framework.viewsets import ModelViewSet
 
-from students.models import Student
-from students.serializers import StudentSerializer
+from teachers.models import Teacher
+from teachers.serializers import TeacherSerializer
 
 
-class StudentViewSet(ModelViewSet):
-    serializer_class = StudentSerializer
-    queryset = Student.objects.all()
+class TeacherViewSet(ModelViewSet):
+    serializer_class = TeacherSerializer
+    queryset = Teacher.objects.all()
 
     def get_permissions(self):
         print(self.request.method)

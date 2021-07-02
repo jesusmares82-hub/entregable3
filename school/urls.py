@@ -20,10 +20,12 @@ from rest_framework_simplejwt.views import TokenRefreshView, TokenObtainPairView
 
 from courses.views import CourseViewSet
 from students.views import StudentViewSet
+from teachers.views import TeacherViewSet
 
 router = DefaultRouter()
 router.register('students', StudentViewSet)
 router.register('courses', CourseViewSet)
+router.register('teachers', TeacherViewSet)
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
